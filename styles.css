@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Grifinito L";
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #a19a8f;
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+}
+
+section {
+  width: 120vw;
+  font-size: 6em;
+  line-height: 1em;
+  background: #a19a8f;
+}
+
+.wrap {
+  display: flex;
+  height: 100%;
+}
+
+.section {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -200px;
+}
+
+.blocks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 100%;
+  background: #a19a8f;
+  z-index: 100;
+  padding: 2rem 1.25rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  pointer-events: auto;
+  cursor: pointer;
+  border-left: 0.2rem solid #000;
+  font-weight: 500;
+}
+
+.block[data-block-section="2"].init {
+  left: calc(100vw - 16rem);
+}
+
+.block[data-block-section="2"].fixed {
+  left: 4rem;
+  border-left: 0.2rem solid #000;
+}
+
+.block[data-block-section="3"].init {
+  left: calc(100vw - 12rem);
+}
+
+.block[data-block-section="3"].fixed {
+  left: 8rem;
+}
+
+.block[data-block-section="4"].init {
+  left: calc(100vw - 8rem);
+}
+
+.block[data-block-section="4"].fixed {
+  left: 12rem;
+}
+
+.block[data-block-section="5"].init {
+  left: calc(100vw - 4rem);
+}
+
+.block[data-block-section="5"].fixed {
+  left: 16rem;
+}
+
+.block__title {
+  position: relative;
+  white-space: nowrap;
+  transform: rotate(-90deg) translate(-50%);
+  text-align: right;
+}
+
+.block__number,
+.block__title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 1.06rem;
+  color: #000;
+}
